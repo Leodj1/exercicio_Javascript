@@ -1,18 +1,27 @@
 function findMaxMinIndices(arr) {
-    let minIndex = 0; // valor minimo del array
-    let maxIndex = 0; // valor maixmo del array
+    let minIndex = 0;
+    let maxIndex = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < minIndex) {
-            minIndex = arr[i]; // si se cumple la condicion de arriba minIndex va a recibir el valor minimo del array actual
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[minIndex]) {
+            minIndex = i;
         }
-        if (arr[i] > maxIndex) {
-            maxIndex = arr[i]; // si se cumple la condicion de arriba maxIndex va a recibir el valor maximo del array actual
+        if (arr[i] > arr[maxIndex]) {
+            maxIndex = i;
         }
     }
 
     return { minIndex, maxIndex };
 }
 
-console.log(findMaxMinIndices([1, 3, 7, 6, 0, -1])); // valores para el array y iniciador de la funcion
+module.exports = findMaxMinIndices;
+
+
+
+
+
+
+
+
+
 
