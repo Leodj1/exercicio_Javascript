@@ -1,12 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
-
-function mdc(a, b) {
-    if (b == 0) {
-        return Math.abs(a);
-    }
-    return mdc(b, a % b);
-}
+const mdc = require('./Part_01');
 
 describe('Función mdc', () => {
     it('debería devolver "a" si b es 0', () => {
