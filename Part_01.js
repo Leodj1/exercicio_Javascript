@@ -1,12 +1,11 @@
 function mdc(a, b) {
     if (b == 0) {
-        return a;
-    } else {
-        return mdc(b, a % b);
+        return Math.abs(a);
     }
+    return mdc(b, a % b);
 }
 
-console.log(mdc(20, 40));
+module.exports = mdc;
 
 
 
